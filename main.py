@@ -2,10 +2,7 @@ import telebot
 from telebot import types 
 from mod import get_class, mozg, bruho, addmin, TOKEN, channel
 
-
 users = {}
-check_info = {}
-
 
 bot = telebot.TeleBot(TOKEN)
 
