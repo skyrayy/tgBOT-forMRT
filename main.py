@@ -14,10 +14,10 @@ def help(message):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    keyboard = types.ReplyKeyboardMarkup()
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
     button_num = types.KeyboardButton(text='Предоставить номер', request_contact=True)
     keyboard.add(button_num)
-    bot.reply_to(message, "Здравствуйте! Чтобы нужный специалист мог с Вами связаться, пожалуйста, предоставьте свой номер телефона.", reply_markup = keyboard)
+    bot.reply_to(message, "Здравствуйте! Чтобы нужный специалист мог с Вами связаться, пожалуйста, предоставьте свой номер телефона.\n \nСправка по боту - /help", reply_markup = keyboard)
 
 
 
