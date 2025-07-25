@@ -9,11 +9,6 @@ check_info = {}
 
 bot = telebot.TeleBot(TOKEN)
 
-@bot.message_handler(commands=['check'])
-def help(message):
-    bot.send_message(mozg, 'mozg')
-    bot.send_message(bruho, 'bruho')
-
 
 @bot.message_handler(commands=['help'])
 def help(message):
